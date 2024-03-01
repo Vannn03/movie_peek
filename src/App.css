@@ -1,0 +1,17 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* animation delay for hero section in  home */
+.desc-delay.animate__animated.animate__fadeInRight {
+  animation-delay: .2s;
+}
+.movie-delay.animate__animated.animate__fadeInRight {
+  animation-delay: .4s;
+}
+.tv-delay.animate__animated.animate__fadeInRight, .animate__animated.animate__fadeIn {
+  animation-delay: .6s;
+}
