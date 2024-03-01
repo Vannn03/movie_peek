@@ -48,7 +48,7 @@ const NowAndUpcoming = () => {
         </div>
         {/* Button to see all now playing movies (for design only!) */}
         <div className="mt-6 flex justify-center font-poppins">
-          <button className="cursor-pointer rounded-sm bg-red-700 px-4 py-2 font-medium text-white">
+          <button className="cursor-pointer rounded-sm bg-red-700 px-4 py-2 text-white xs:text-sm">
             See all
           </button>
         </div>
@@ -72,7 +72,7 @@ const NowAndUpcoming = () => {
         </div>
         {/* Button to see all upcoming movies (for design only!) */}
         <div className="mt-6 flex justify-center font-poppins">
-          <button className="cursor-pointer rounded-sm bg-red-700 px-4 py-2 font-medium text-white">
+          <button className="cursor-pointer rounded-sm bg-red-700 px-4 py-2 text-white xs:text-sm">
             See all
           </button>
         </div>

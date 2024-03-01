@@ -34,7 +34,7 @@ const Popular = () => {
           Popular Movies
         </h1>
         {/* Button to see all popular movies (for design only!) */}
-        <button className="cursor-pointer rounded-sm bg-red-700 px-4 py-2 font-poppins font-medium text-white">
+        <button className="cursor-pointer rounded-sm bg-red-700 px-4 py-2 font-poppins text-white xs:text-sm">
           See all
         </button>
       </div>
