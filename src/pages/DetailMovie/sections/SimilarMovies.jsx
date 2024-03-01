@@ -27,17 +27,22 @@ const SimilarMovies = () => {
       </h1>
       {/* Displaying similar movie cards */}
       <div className="flex flex-wrap gap-6">
-        {movieList.map((movie) => (
-          <div className="w-[225px] flex-auto ss:w-[125px]" key={movie.id}>
-            {/* Link to the detail page of each similar movie */}
-            <Link to={`/movies/detail/${movie.id}`}>
-              {/* Lazy-loaded SimilarCards component */}
-              <Suspense fallback={<SimilarLoader />}>
-                <SimilarCards movie={movie} />
-              </Suspense>
-            </Link>
-          </div>
-        ))}
+        {movieList.length === 0 ? (
+          // Display message if no results found
+          <p className="mx-auto text-white/50">No results found</p>
+        ) : (
+          movieList.map((movie) => (
+            <div className="w-[225px] flex-auto ss:w-[125px]" key={movie.id}>
+              {/* Link to the detail page of each similar movie */}
+              <Link to={`/movies/detail/${movie.id}`}>
+                {/* Lazy-loaded SimilarCards component */}
+                <Suspense fallback={<SimilarLoader />}>
+                  <SimilarCards movie={movie} />
+                </Suspense>
+              </Link>
+            </div>
+          ))
+        )}
       </div>
     </div>
   );
