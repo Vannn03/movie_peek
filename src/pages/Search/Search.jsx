@@ -43,10 +43,12 @@ const Search = () => {
         </div>
       </div>
       {/* Movie list */}
-      <div className="flex flex-wrap gap-6 px-8 font-poppins text-white">
+      <div className="grid grid-cols-5 gap-6 px-8 font-poppins text-white sm:grid-cols-2">
         {movieList.length === 0 ? (
           // Display message if no results found
-          <p className="mx-auto h-[80dvh] text-white/50">No results found</p>
+          <p className="col-span-5 flex h-[80dvh] justify-center text-white/50">
+            No results found
+          </p>
         ) : (
           // Render movie cards
           movieList
@@ -63,10 +65,7 @@ const Search = () => {
                 ),
             )
             .map((movie) => (
-              <div
-                className="min-w-[200px] max-w-[300px] flex-1 ss:min-w-[125px] ss:max-w-[200px]"
-                key={movie.id}
-              >
+              <div key={movie.id}>
                 {/* Link to movie details */}
                 <Link to={`/movies/detail/${movie.id}`}>
                   {/* Lazy-loaded movie card */}

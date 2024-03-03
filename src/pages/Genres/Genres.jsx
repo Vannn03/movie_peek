@@ -103,17 +103,14 @@ const Genres = () => {
       <hr className="mx-8 mb-6 border-white/50" />
 
       {/* Display movies or no results message */}
-      <div className="flex flex-wrap gap-6 px-8 font-poppins text-white">
+      <div className="grid grid-cols-5 gap-6 px-8 font-poppins text-white sm:grid-cols-2">
         {filteredMovies.length === 0 ? (
-          <div className="mx-auto h-[75dvh]">
+          <div className="col-span-5 flex h-[75dvh] justify-center">
             <p className="text-white/50">No results found</p>
           </div>
         ) : (
           filteredMovies.map((movie) => (
-            <div
-              className="min-w-[200px] max-w-[300px] flex-1 ss:min-w-[125px] ss:max-w-[200px]"
-              key={movie.id}
-            >
+            <div key={movie.id}>
               <Link to={`/movies/detail/${movie.id}`}>
                 <Suspense fallback={<SimilarLoader />}>
                   <SimilarCards movie={movie} />

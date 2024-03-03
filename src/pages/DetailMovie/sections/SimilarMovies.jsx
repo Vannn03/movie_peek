@@ -26,13 +26,15 @@ const SimilarMovies = () => {
         Similar Movies
       </h1>
       {/* Displaying similar movie cards */}
-      <div className="flex flex-wrap gap-6">
+      <div className="grid grid-cols-5 gap-6 sm:grid-cols-2">
         {movieList.length === 0 ? (
           // Display message if no results found
-          <p className="mx-auto text-white/50">No results found</p>
+          <p className="col-span-5 flex justify-center text-white/50">
+            No results found
+          </p>
         ) : (
           movieList.map((movie) => (
-            <div className="w-[225px] flex-auto ss:w-[125px]" key={movie.id}>
+            <div key={movie.id}>
               {/* Link to the detail page of each similar movie */}
               <Link to={`/movies/detail/${movie.id}`}>
                 {/* Lazy-loaded SimilarCards component */}

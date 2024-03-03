@@ -29,13 +29,10 @@ const TopRated = () => {
         <h1 className="mb-6 text-center font-poppins text-2xl font-semibold xs:text-xl">
           Top Rated Movies
         </h1>
-        <div className="flex flex-wrap gap-6">
+        <div className="grid grid-cols-4 gap-6 sm:grid-cols-2">
           {/* Render each top rated movie as a card */}
           {displayedMovies.map((movie) => (
-            <div
-              className="relative w-[225px] flex-auto pt-4 ss:w-[125px]"
-              key={movie.id}
-            >
+            <div className="relative pt-4" key={movie.id}>
               {/* Link to movie details */}
               <Link to={`/movies/detail/${movie.id}`}>
                 {/* Lazy-loaded TopRatedCards component */}
